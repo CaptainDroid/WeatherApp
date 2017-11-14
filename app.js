@@ -1,8 +1,10 @@
 http = require('http');
 
+//Search by City ID. (Get city id on OpenWeatherMap.com)
+//url = 'http://api.openweathermap.org/data/2.5/forecast?id=1264527&APPID=db5242beb8806f20cb183adcf42947d2&units=metric'
 
-url = 'http://api.openweathermap.org/data/2.5/forecast?id=1264527&APPID=db5242beb8806f20cb183adcf42947d2&units=metric'
-
+//Search by City Name, Country code
+url = 'http://api.openweathermap.org/data/2.5/forecast?q=Lucknow,IN&APPID=db5242beb8806f20cb183adcf42947d2&units=metric'
 var server = http.createServer(function(request, response) {
     var request = require('request');
     request(url, function(err, res, body) {
