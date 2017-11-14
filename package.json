@@ -1,0 +1,14 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "App to display current weather using a restful api call",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akash Srivastav",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
