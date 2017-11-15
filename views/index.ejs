@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Weather Information!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <fieldset>
+                <form action="/" method="POST">
+                    <input type="text" name="City" class="ghost-input" placeholder="Enter the City name" required>
+                    <input type="text" name="Country" class="ghost-input" placeholder="Enter the Country CODE" ><br/>
+                    <input type="submit" class="ghost-button" value="Get Weather!">
+                </form>
+            
+                <% if(weather!==null) {%>
+                    <p class="big"><%= temperature %><br/>
+                    <%= maxTemperature %><br/>
+                    <%= minTemperature %><br/>
+                    <%= weather %><br/>
+                    <%= weatherDescription %> </p>
+                <% } %>
+                <% if( error !== null) {%>
+                    <p><%= error %> </p>
+                <% } %>
+                
+            </fieldset>
+        </div>
+    </body>
+</html>
